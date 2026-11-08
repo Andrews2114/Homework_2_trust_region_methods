@@ -1,0 +1,20 @@
+\texttt{test\_tcg\_1d\_interior} & tCG 1-D, minimiser strictly inside the ball & pass \\
+\texttt{test\_tcg\_1d\_boundary} & tCG 1-D, minimiser outside: stops on the boundary & pass \\
+\texttt{test\_tcg\_1d\_negative\_curvature} & tCG 1-D, concave model: goes to the correct boundary point & pass \\
+\texttt{test\_tcg\_zero\_gradient} & tCG corner case $g=0$ returns $v=0$ & pass \\
+\texttt{test\_tcg\_zero\_hessian} & tCG with $H=0$: boundary step along $-g$ & pass \\
+\texttt{test\_tcg\_tiny\_radius} & tCG with tiny $\Delta$: Cauchy-like step $-\Delta g/\|g\|$ & pass \\
+\texttt{test\_tcg\_2d\_negative\_curvature} & tCG 2-D indefinite $H$, exact solution known & pass \\
+\texttt{test\_tcg\_3d\_interior\_equals\_newton} & tCG 3-D, large ball, tiny tolerance: equals $-H^{-1}g$ & pass \\
+\texttt{test\_tcg\_singular\_psd\_in\_range} & tCG 3-D singular PSD $H$, $g\in\mathrm{range}(H)$ & pass \\
+\texttt{test\_tcg\_singular\_psd\_outside\_range} & tCG 2-D singular PSD $H$, zero curvature along $-g$ & pass \\
+\texttt{test\_tcg\_random\_properties} & 200 random indefinite models: feasibility, Cauchy decrease, tracked $Hv$ & pass \\
+\texttt{test\_tcg\_matrix\_free\_callable} & tCG only needs a function $v\mapsto Hv$ & pass \\
+\texttt{test\_tr\_quadratic} & TR-tCG on a strongly convex quadratic finds $Q^{-1}b$ & pass \\
+\texttt{test\_tr\_rosenbrock} & TR-tCG on Rosenbrock reaches $(1,1)$, $f$ monotone & pass \\
+\texttt{test\_tr\_escapes\_saddle} & TR-tCG leaves a saddle point (negative curvature) & pass \\
+\texttt{test\_tr\_radius\_rules} & TR-tCG radius updates respect $\bar\Delta$ and doubling rule & pass \\
+\texttt{test\_grad\_vs\_dense\_formula} & gradient equals explicit formula & pass \\
+\texttt{test\_hessvec\_vs\_dense\_and\_symmetry} & Hessian-vector product equals dense Hessian; symmetry & pass \\
+\texttt{test\_hessvec\_vs\_finite\_difference\_of\_gradient} & Hessian-vector product vs central differences of $\nabla f$ & pass \\
+\bottomrule
